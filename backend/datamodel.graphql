@@ -1,0 +1,9 @@
+type Recipe {
+    id: ID! @unique
+    name: String!
+    description: String!
+    ingredients: String!
+    instructions: String!
+}
+
+

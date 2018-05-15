@@ -10,6 +10,7 @@ export default class extends Component {
         <div><strong>Ingredients: </strong>{info.ingredients}</div>
         <div><strong>Instructions: </strong>{info.instructions}</div>
         <div><strong>Id: </strong>{info.id}</div>
+        <br/>
       </div>
     )
   }

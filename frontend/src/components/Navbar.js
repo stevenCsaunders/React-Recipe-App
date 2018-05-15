@@ -19,6 +19,8 @@ export default class extends Component {
           <MenuItem onClick={ () => handleClose ('/')}>Home</MenuItem>
           <MenuItem onClick={ () => handleClose ('/recipebox')}>Recipe Box</MenuItem>
           <MenuItem onClick={ () => handleClose ('/newitem')}>New Recipe</MenuItem>
+          <MenuItem onClick={ () => handleClose ('/update')}>Update Recipe</MenuItem>
+          <MenuItem onClick={ () => handleClose ('/delete')}>Delete Recipe</MenuItem>
         </Drawer>
       </div>
 

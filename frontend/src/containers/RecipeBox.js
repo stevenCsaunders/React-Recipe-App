@@ -38,9 +38,8 @@ export default class extends Component{
       <div>
         <Nav />
         <h1>Read Recipes from DataBase</h1>
-        <button className="gralButton" onClick={ loadRecipes } >Get All Recipes</button>
         <br/><br/>
-        {this.state.recipes[0] ? this.state.recipes.map((info) => { return <Template key={info.id} data={info} /> }) : <div></div>}
+        {this.state.recipes[0] ? this.state.recipes.map((info) => { return <Template key={info.id} data={info} /> }) : <div>${window.onload = loadRecipes}</div>}
           </div>
     )
   }

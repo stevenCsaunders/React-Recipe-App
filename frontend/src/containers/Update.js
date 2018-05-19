@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import gql from "graphql-tag"
 
-import { client } from './endpoints/Endpoint'
+import { client } from '../endpoints/Endpoint'
 import Nav from '../components/Nav'
 
 export default class extends Component {

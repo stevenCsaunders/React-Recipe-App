@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import gql from "graphql-tag"
 
-import { client } from './endpoints/Endpoint'
+import { client } from '../endpoints/Endpoint'
 import Nav from '../components/Nav'
 
 export default class extends Component {
@@ -13,7 +13,6 @@ export default class extends Component {
   }
 
 render(){
-
   const addRecipe = async () => {
      await client.mutate({
       mutation: gql`
@@ -40,6 +39,19 @@ render(){
     window.location.reload()
   };
 
+
+  let page = '/recipeBox';
+
+  const pageChange = () => {
+
+    window.location.replace(page)
+  }
+
+let onClickEvent = (e) =>{
+    addRecipe(e);
+    pageChange(e);
+  }
+
   return(
     <Fragment>
       <Nav />
@@ -52,7 +64,7 @@ render(){
         <input type="text" value={ this.state.instructions } onChange={ (event) => { this.setState({ instructions: event.target.value }) } } />
 
         <br/><br/>
-        <button onClick={ addRecipe } >Save Recipe</button>
+        <button onClick={ onClickEvent} >Save Recipe</button>
       </div>
     </Fragment>
   )

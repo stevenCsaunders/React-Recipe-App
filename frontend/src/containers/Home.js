@@ -8,10 +8,10 @@ export default class extends Component {
     return (
       <Fragment>
         <Nav />
-        <div className={'.HomeTitle'}>
+        <div>
           <h1>Recipe Box</h1>
         </div>
-        <div className={'.SearchBar'}>
+        <div>
           <Search />
         </div>
       </Fragment>

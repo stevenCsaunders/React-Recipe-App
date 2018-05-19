@@ -6,7 +6,7 @@ import Paper from 'material-ui/Paper'
 import { ApolloProvider } from "react-apollo"
 
 import Routes from './config/Routes'
-import { client } from './containers/endpoints/Endpoint'
+import { client } from './endpoints/Endpoint'
 
 const App = () => (
   <ApolloProvider client={client}>

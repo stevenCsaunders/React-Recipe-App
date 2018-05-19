@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import gql from "graphql-tag"
 
-import { client } from './endpoints/Endpoint'
+import { client } from '../endpoints/Endpoint'
 import Nav from '../components/Nav'
-import Template from '../components/Template'
+import BoxItem from '../components/recipebox/BoxItem'
 
 
 export default class extends Component{
@@ -39,7 +39,7 @@ export default class extends Component{
         <Nav />
         <h1>Read Recipes from DataBase</h1>
         <br/><br/>
-        {this.state.recipes[0] ? this.state.recipes.map((info) => { return <Template key={info.id} data={info} /> }) : <div>${window.onload = loadRecipes}</div>}
+        {this.state.recipes[0] ? this.state.recipes.map((info) => { return <BoxItem key={info.id} data={info} /> }) : <div>{window.onload = loadRecipes}</div>}
           </div>
     )
   }

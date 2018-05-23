@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import AppBar from 'material-ui/AppBar';
 import Navbar from './Navbar';
+import blue from 'material-ui/'
 
 
 
@@ -19,6 +20,7 @@ export default class extends Component{
     return(
       <div>
         <AppBar
+          style={{backgroundColor: blue500}}
           title="Recipe Box"
           onLeftIconButtonClick = {toggleMenu}
         />

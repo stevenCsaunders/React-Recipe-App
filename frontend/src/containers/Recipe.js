@@ -40,15 +40,19 @@ export default class extends Component{
           }
       `}).then((result) => { return result.data.recipe } )
 
-    await console.log("La Data: ", temp1 )
-    await this.setState({ name: temp1.name, description: temp1.description, ingredients: temp1.ingredients, instructions: temp1.instructions, id: temp1.id })
+    await this.setState({
+      name: temp1.name,
+      description: temp1.description,
+      ingredients: temp1.ingredients,
+      instructions: temp1.instructions,
+      id: temp1.id
+    })
 
   }
 
+
+
   render(){
-    console.log("The Toketn inside of CWM: ", this.props.match.params.id)
-
-
 
 
     return(
@@ -69,8 +73,7 @@ export default class extends Component{
           anchorOrigin={{horizontal: 'right', vertical: 'top'}}
           targetOrigin={{horizontal: 'right', vertical: 'top'}}
         >
-          <MenuItem primaryText="Update Recipe" containerElement={<Link to={``} />}/>
-          <MenuItem primaryText="Delete Recipe" containerElement={<Link to={``} />}/>
+          <MenuItem primaryText="Update Recipe" containerElement={<Link to={`/update/${this.state.id}`} />}/>
         </IconMenu>
         </div>
       </div>

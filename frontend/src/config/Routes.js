@@ -5,7 +5,6 @@ import RecipeBox from '../containers/RecipeBox';
 import NewItem from '../containers/NewItem';
 import Home from "../containers/Home";
 import Update from "../containers/Update";
-import Delete from "../containers/Delete";
 import Recipe from "../containers/Recipe";
 
 
@@ -18,10 +17,9 @@ export default class extends Component {
       <div>
         <Route  exact path='/' component={Home}/>
         <Route  path='/recipebox' component={RecipeBox}/>
-        <Route  path="/one/:id" component={Recipe} />
+        <Route  path="/recipe/:id" component={Recipe} />
         <Route  path='/newitem' component={NewItem}/>
-        <Route  path='/update' component={Update}/>
-        <Route  path='/delete' component={Delete}/>
+        <Route  path='/update/:id' component={Update}/>
       </div>
     );
   }
